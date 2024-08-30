@@ -6,7 +6,8 @@ def g(x):
     return ( 1.0 /  (1.0 + math.exp(-x) ))
 
 def gprime(x):
-    return ( x * (1-x) )
+    y = g(x)
+    return ( y * (1-y) )
 
 
 ## check these are the right shape.
@@ -24,7 +25,7 @@ plt.plot(xs, gps,  label="gprime")
 plt.legend()
 plt.show()
 
-bias = 0                       # value of bias unit
+bias = -1                       # value of bias unit
 
 epsilon = 0.5
 
@@ -83,7 +84,7 @@ for epoch in range(nepoch):
 
         ## 1b - hidden to output
         a_k = np.matmul(W2, y_j)
-        y_k = a_k
+        y_k = g(a_k)
 
         ## 1c - compare output to target
         t_k  = targets[i]
@@ -95,7 +96,7 @@ for epoch in range(nepoch):
 
 
         ## 2a - output to hidden
-        delta_k = gprime(a_k) 
+        delta_k = gprime(a_k) * (t_k - y_k) 
         for q in range(J+1):
             ##for r in range(K):
             r=0
@@ -110,7 +111,7 @@ for epoch in range(nepoch):
         ## 2c - calculate error for input to hidden weights
         for p in range(I+1):
             for q in range(J):
-                DW1[q,p] += y_i[p] 
+                DW1[q,p] += y_i[p] * delta_j[q]
 
 
     ## end of an epoch - now update weights

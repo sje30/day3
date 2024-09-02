@@ -27,6 +27,7 @@ show_points(data, wts, plt, 'start')
 epsilon = 0.03
 nepochs = 100
 
+beta = 0.1  # regularisation, try 0.01, 0.1, 1, 10 - or zero to ignore.
 
 x = np.array([0.0, 0.0, -1])
 for epoch in range(nepochs):
@@ -40,8 +41,8 @@ for epoch in range(nepochs):
         t    = data[i,2]
         a = np.dot(x, wts)
         y = a > 0
-        error = error + (0.5 *(t-y)**2)
-        dw = epsilon * (t-y) * x
+        error = error + (0.5 *(t-y)**2)  ### BUG -- "y-t" before.
+        dw = epsilon * ( ((t-y) * x)  - (beta * wts))
         wts = wts + dw
     title=f"Epoch {epoch} error {error}"
     print(title)

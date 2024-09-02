@@ -1,8 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import torch
 
-## reasd in data
+## read in data
 
 data = np.loadtxt("eg2d.dat", delimiter=",",skiprows=1)
 

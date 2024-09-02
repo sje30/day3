@@ -7,3 +7,11 @@ training material for day 3
 
 
 [![Open sigmoid torch In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sje30/day3/blob/master/sigmoid_torch.ipynb)
+
+
+## Q2 - perceptron
+
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sje30/day3/blob/master/per_rosenblatt_broken.ipynb)
+
+

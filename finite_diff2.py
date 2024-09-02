@@ -40,6 +40,19 @@ plt.loglog(hs, e2)
 plt.title('complex step')
 
 
+plt.clf()
+plt.title("Comparison")
+plt.xlabel("step size, h")
+plt.ylabel("abs error")
+plt.loglog(hs, e1,  label="finite step")
+plt.loglog(hs, e2,  label="complex step")
+plt.legend()
+plt.show()
+plt.savefig("finitestep-compare.pdf", format="pdf",
+            transparent=True,
+            bbox_inches="tight")
+
+
 ## Dual numbers
 
 class Dual():

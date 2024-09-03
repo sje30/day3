@@ -19,5 +19,10 @@ training material for day 3
 ## Pytorch examples
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sje30/day3/blob/master/sigmoid_torch.ipynb)
-
+	
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sje30/day3/blob/master/xor_torch.ipynb)
+
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Data-Intensive-Training/Day2Morning/blob/master/infosys_neural_nets_1a_given.ipynb)
+
+
